@@ -1,1 +1,1 @@
-# URL-TO-QRL
+# URL-TO-QR
