@@ -2,17 +2,20 @@ import inquirer from 'inquirer';
 
 inquirer
   .prompt([
-    /* Pass your questions in here */
-    {message: "Enter the url: ,
-        name: URL}
+    {
+      type: 'input',
+      message: 'Enter the URL:',
+      name: 'url'
+    }
   ])
   .then((answers) => {
-    // Use user feedback for... whatever!!
+    console.log('You entered:', answers.url);
+    // You can now use answers.url for your logic
   })
   .catch((error) => {
     if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
+      console.error('Prompt couldn’t be rendered in the current environment.');
     } else {
-      // Something else went wrong
+      console.error('Something went wrong:', error);
     }
   });
